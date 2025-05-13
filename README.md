@@ -1,85 +1,102 @@
-ElementorToGoogleSheets
-Google Apps Script to connect Elementor Pro Forms to Google Sheets via webhook, with support for custom sheet names, column ordering, and exclusion.
-Overview
-This script captures form submissions from Elementor Pro Forms and stores them in a Google Sheet. It supports:
+**ElementorFormDataToGoogleSheets**
+ElementorFormDataToGoogleSheets is a Google Apps Script that connects Elementor Pro forms to Google Sheets, automatically saving form submissions. Ideal for Elementor form to Google Sheets integration, it’s easy to set up with no coding required.
+ (Placeholder: Add GIF of integration)
+Features
 
-Automatic sheet creation based on form name or a custom field.
-Custom column ordering via a form field.
-Exclusion of specific columns.
-Optional email notifications for new submissions.
+Syncs Elementor form data to Google Sheets in real-time.
+Customizes sheet names, column order, and excludes fields.
+Handles nested form data cleanly.
+Optional email notifications for submissions.
+Open-source under MIT License.
 
-Setup
+Prerequisites
 
-Open Google Sheets:
+Elementor Pro form in WordPress.
+Google Sheets with Apps Script access.
 
-Create or open a Google Sheet where form data will be stored.
-Go to Extensions > Apps Script.
+Setup Instructions
 
+Copy Script:
 
-Paste the Script:
-
-Copy the script from Code.gs in this repository.
-Paste it into the Apps Script editor and click Save.
-
-
-Deploy as Web App:
-
-Click Deploy > New Deployment.
-Select Web App.
-Set:
-Execute as: Me (your email).
-Who has access: Anyone (or Anyone, even anonymous, if allowed).
+Get the code from script.gs in this repository.
 
 
-Click Deploy and authorize permissions.
-Copy the Web App URL provided.
+Create Apps Script:
+
+In Google Sheets, go to Extensions > Apps Script.
+Paste the code and save (e.g., "ElementorFormDataToGoogleSheets").
 
 
-Configure Elementor Pro Form:
+Deploy Web App:
 
-In Elementor, create or edit a form.
-Add a Webhook action and paste the Web App URL.
-Ensure the form has a form_name field (default in Elementor).
-
-
-
-Usage
-
-Submit the Elementor form to send data to the Google Sheet.
-A new sheet is created (named after form_name or a custom field) if it doesn’t exist.
-Form data is added as rows, with headers automatically generated from form fields.
-
-Optional Form Fields
-Add these hidden fields to your Elementor form to customize behavior:
-
-e_gs_SheetName: Set the Google Sheet name (default: form_name).
-Example: ContactFormData
+Click Deploy > New Deployment > Web App.
+Set Execute as: Me, Access: Anyone.
+Copy the Web App URL.
 
 
-e_gs_order: Comma-separated list of column names in desired order.
-Example: name,email,phone
+Set Webhook:
+
+In WordPress, edit your Elementor Pro form.
+Add a Webhook action with the Web App URL.
 
 
-e_gs_exclude: Comma-separated list of columns to exclude.
-Example: submit_time,form_id
+Test:
+
+Open the Web App URL in a browser; it should show:Yepp this is the webhook URL, request received
+
+
+Submit a test form to verify data in the sheet.
+
+
+Email Notifications (Optional):
+
+Set emailNotification = true and update emailAddress in the script.
+Redeploy the script.
 
 
 
-Testing
+ (Placeholder: Add screenshot of deployment)
+Optional Fields
+Customize your Elementor form to Google Sheets output:
 
-Paste the Web App URL in a browser. You should see: Yepp this is the webhook URL, request received.
-Submit a test form in Elementor and check the Google Sheet for new data.
-Enable email notifications (edit emailNotification and emailAddress in the script) to receive alerts for new submissions.
+e_gs_SheetName: Set sheet tab name (default: form name).
+Example: Hidden field with value MyFormData.
 
+
+e_gs_order: Define column order (e.g., name,email,phone).
+e_gs_exclude: Exclude fields (e.g., form_id,submit_time).
+
+Add as hidden fields in your Elementor form.
+FAQ
+How to connect Elementor to Google Sheets?
+Use ElementorFormDataToGoogleSheets. Deploy the script as a web app and set the webhook in your form. See Setup Instructions.
+Can I customize the sheet name?
+Yes, use a hidden field e_gs_SheetName in your form.
+How to exclude fields?
+Add a hidden field e_gs_exclude with comma-separated field names.
+Does it handle nested data?
+Yes, nested data is flattened for clean output.
 Troubleshooting
 
-No data in sheet: Verify the Web App URL is correct in Elementor and the script is deployed with anonymous access.
-Permission errors: Ensure you authorized all required permissions during deployment.
-Server errors: Check Apps Script Executions logs for details (View > Executions).
-Email issues: Confirm emailAddress is valid and Google’s email quota isn’t exceeded.
+No data: Check webhook URL and form submission.
+Permission error: Ensure web app allows "Anyone" access.
+Email issues: Verify emailNotification and emailAddress.
 
+Report issues in the Issues tab.
 Contributing
-Feel free to fork this repository, submit issues, or create pull requests to improve the script.
+
+Fork the repo.
+Create a branch (git checkout -b feature/your-feature).
+Commit changes (git commit -m "Add feature").
+Push (git push origin feature/your-feature).
+Open a Pull Request.
+
 License
-MIT License
-Last updated: May 13, 2025
+MIT License. See LICENSE.
+Support
+
+⭐ Star this repo on GitHub.
+Share in WordPress, Elementor, or Google Sheets communities.
+Report bugs via Issues.
+
+Updated: May 13, 2025
