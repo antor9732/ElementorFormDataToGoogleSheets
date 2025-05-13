@@ -1,4 +1,4 @@
-<h1>ElementorFormDataToGoogleSheets</h1>
+<h1>Elementor Form Data To Google Sheets</h1>
 <strong>Elementor Form Data To Google Sheets</strong> is a Google Apps Script that connects <strong>Elementor Pro forms</strong> to <strong>Google Sheets</strong>, automatically saving form submissions. Ideal for <strong>Elementor form to Google Sheets integration</strong>, it’s easy to set up with no coding required.
 
 <h2>Features</h2>
