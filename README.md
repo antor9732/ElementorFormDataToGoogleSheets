@@ -84,14 +84,6 @@ Yes, nested data is flattened for clean output.
  	<li><strong>Email issues</strong>: Verify <code>emailNotification</code> and <code>emailAddress</code>.</li>
 </ul>
 Report issues in the <a href="https://github.com/antor9732/ElementorFormDataToGoogleSheets/issues">Issues tab</a>.
-<h2>Contributing</h2>
-<ol>
- 	<li>Fork the repo.</li>
- 	<li>Create a branch (<code>git checkout -b feature/your-feature</code>).</li>
- 	<li>Commit changes (<code>git commit -m "Add feature"</code>).</li>
- 	<li>Push (<code>git push origin feature/your-feature</code>).</li>
- 	<li>Open a Pull Request.</li>
-</ol>
 <h2>License</h2>
 MIT License.
 <h2>Support</h2>
