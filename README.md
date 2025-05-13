@@ -1,7 +1,6 @@
 <h1>ElementorFormDataToGoogleSheets</h1>
 <strong>ElementorFormDataToGoogleSheets</strong> is a Google Apps Script that connects <strong>Elementor Pro forms</strong> to <strong>Google Sheets</strong>, automatically saving form submissions. Ideal for <strong>Elementor form to Google Sheets integration</strong>, it’s easy to set up with no coding required.
 
-<img src="https://grok.com/chat/screenshots/demo.gif" alt="Demo" /> <em>(Placeholder: Add GIF of integration)</em>
 <h2>Features</h2>
 <ul>
  	<li>Syncs <strong>Elementor form data to Google Sheets</strong> in real-time.</li>
@@ -57,7 +56,6 @@
 </ul>
 </li>
 </ol>
-<img src="https://grok.com/chat/screenshots/setup.png" alt="Setup" /> <em>(Placeholder: Add screenshot of deployment)</em>
 <h2>Optional Fields</h2>
 Customize your <strong>Elementor form to Google Sheets</strong> output:
 <ul>
@@ -72,7 +70,7 @@ Customize your <strong>Elementor form to Google Sheets</strong> output:
 Add as hidden fields in your <strong>Elementor form</strong>.
 <h2>FAQ</h2>
 <h3>How to connect Elementor to Google Sheets?</h3>
-Use <strong>ElementorFormDataToGoogleSheets</strong>. Deploy the script as a web app and set the webhook in your form. See <a href="https://grok.com/chat/28913607-a70d-4c1f-a99c-367ae26c307b#setup-instructions">Setup Instructions</a>.
+Use <strong>ElementorFormDataToGoogleSheets</strong>. Deploy the script as a web app and set the webhook in your form.
 <h3>Can I customize the sheet name?</h3>
 Yes, use a hidden field <code>e_gs_SheetName</code> in your form.
 <h3>How to exclude fields?</h3>
@@ -95,7 +93,7 @@ Report issues in the <a href="https://github.com/antor9732/ElementorFormDataToGo
  	<li>Open a Pull Request.</li>
 </ol>
 <h2>License</h2>
-MIT License. See <a href="https://grok.com/chat/LICENSE">LICENSE</a>.
+MIT License.
 <h2>Support</h2>
 <ul>
  	<li>⭐ Star this repo on GitHub.</li>
